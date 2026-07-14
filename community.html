@@ -1,0 +1,89 @@
+<!-- 这个文件用于承接讨论社区，让访客可以按主题发表观点。 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>讨论社区｜降落伞雪球专题站</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/pages.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand-mark" href="index.html">
+          <span>降落伞雪球</span>
+          <span>讨论社区</span>
+        </a>
+        <nav class="nav-links">
+          <a data-nav href="index.html">首页</a>
+          <a data-nav href="product.html">产品介绍</a>
+          <a data-nav href="scenarios.html">收益情景与图解</a>
+          <a data-nav href="risk.html">风险提示</a>
+          <a data-nav href="community.html">讨论社区</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-title">
+        <div class="container reveal">
+          <span class="eyebrow">讨论社区页</span>
+          <h1>看完介绍之后，也欢迎把自己的判断说出来</h1>
+          <p>
+            这一版社区按你的要求做成“无需登录即可发言”的原型。
+            为了先让页面跑起来，当前发言会保存在打开网页的浏览器本地，用于展示社区体验和讨论结构。
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container community-layout">
+          <aside class="note-card reveal">
+            <small>我要发表观点</small>
+            <h3>发言入口尽量简单</h3>
+            <p>你可以写下问题、收益判断、风险顾虑，或者你对这类产品在当前市场里是否合适的看法。</p>
+            <form class="forum-form" data-community-form>
+              <input name="nickname" type="text" placeholder="你的昵称（可不填）">
+              <input name="title" type="text" placeholder="给你的观点起一个标题">
+              <select name="category">
+                <option value="产品理解">产品理解</option>
+                <option value="收益讨论">收益讨论</option>
+                <option value="风险看法">风险看法</option>
+                <option value="市场观点">市场观点</option>
+              </select>
+              <textarea name="content" placeholder="写下你的观点。比如：你最担心的风险是什么？你觉得哪个条款最值得讨论？"></textarea>
+              <button class="btn btn-primary" type="submit">发表观点</button>
+            </form>
+            <p class="form-tip">当前原型中的讨论内容只保存在本机浏览器。如果后续要做成公开网站，还需要补后台保存和内容管理。</p>
+          </aside>
+
+          <section class="reveal delay-1">
+            <div class="panel">
+              <small>按主题浏览</small>
+              <h2>先看大家在讨论什么</h2>
+              <div class="filter-row">
+                <button class="filter-chip active" data-filter="全部" type="button">全部</button>
+                <button class="filter-chip" data-filter="产品理解" type="button">产品理解</button>
+                <button class="filter-chip" data-filter="收益讨论" type="button">收益讨论</button>
+                <button class="filter-chip" data-filter="风险看法" type="button">风险看法</button>
+                <button class="filter-chip" data-filter="市场观点" type="button">市场观点</button>
+              </div>
+              <div class="forum-list" data-post-list></div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>讨论社区页</span>
+        <span>当前为本地互动原型</span>
+      </div>
+    </footer>
+  </div>
+  <script src="assets/app.js"></script>
+</body>
+</html>
